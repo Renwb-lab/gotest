@@ -21,29 +21,26 @@ func cycle(n int) [][]int {
 	for val < n*n {
 		step += 1
 		// right
-		for i := 0; i < step; i += 1 {
+		for i := 0; i < step && val < n*n; i += 1 {
 			y += 1
 			val += 1
 			ret[x][y] = val
-			if val == n*n {
-				return ret
-			}
 		}
 		// up
-		for i := 0; i < step; i += 1 {
+		for i := 0; i < step && val < n*n; i += 1 {
 			x -= 1
 			val += 1
 			ret[x][y] = val
 		}
 		step += 1
 		// left
-		for i := 0; i < step; i += 1 {
+		for i := 0; i < step && val < n*n; i += 1 {
 			y -= 1
 			val += 1
 			ret[x][y] = val
 		}
 		// down
-		for i := 0; i < step; i += 1 {
+		for i := 0; i < step && val < n*n; i += 1 {
 			x += 1
 			val += 1
 			ret[x][y] = val
@@ -52,7 +49,7 @@ func cycle(n int) [][]int {
 	return ret
 }
 
-func main1() {
+func main() {
 	ret := cycle(9)
 	for _, line := range ret {
 		for _, v := range line {

@@ -57,7 +57,7 @@ func (pq *PriorityQueue) update(item *Item, value string, priority int) {
 // 这个示例首先会创建一个优先队列，并在队列中包含一些元素
 // 接着将一个新元素添加到队列里面，并对其进行操作
 // 最后按优先级有序地移除队列中的各个元素。
-func main() {
+func main1() {
 	// 一些元素以及它们的优先级。
 	items := map[string]int{
 		"banana": 3, "apple": 2, "pear": 4,
