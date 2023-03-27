@@ -49,7 +49,7 @@ func cycle(n int) [][]int {
 	return ret
 }
 
-func main() {
+func main1() {
 	ret := cycle(9)
 	for _, line := range ret {
 		for _, v := range line {
