@@ -50,7 +50,7 @@ func cycle(n int) [][]int {
 }
 
 func main1() {
-	ret := cycle(9)
+	ret := cycle(7)
 	for _, line := range ret {
 		for _, v := range line {
 			fmt.Printf("%d\t", v)
