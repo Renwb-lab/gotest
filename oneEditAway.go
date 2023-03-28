@@ -25,7 +25,7 @@ func oneEditAway(first string, second string) bool {
 	return true
 }
 
-func main() {
+func main12() {
 	ret := oneEditAway("pale", "ple")
 	fmt.Println(ret)
 	ret = oneEditAway("pales", "pal")
