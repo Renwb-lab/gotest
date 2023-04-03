@@ -53,7 +53,7 @@ func longestNumber(instr string) string {
 	return ret
 }
 
-func main() {
+func main17() {
 	{
 		s := "1234567890abcd9.+12345.678.9ed"
 		r := longestNumber(s)
