@@ -60,7 +60,7 @@ func longestSubstring(s string, k int) int {
 	return dfs(0, len(s)-1)
 }
 
-func main() {
+func main55() {
 	s := "bbaaacbd"
 	fmt.Println(longestSubstring(s, 3))
 }

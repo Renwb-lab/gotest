@@ -31,6 +31,7 @@ func maxEnvelopes1(envelopes [][]int) int {
 	sort.Slice(envelopes, func(i, j int) bool {
 		return envelopes[i][0] < envelopes[j][0] || (envelopes[i][0] == envelopes[j][0] && envelopes[i][1] > envelopes[j][1])
 	})
+	// 使用动态规划
 	helper := make([]int, len(envelopes))
 	for i := 0; i < len(envelopes); i += 1 {
 		helper[i] = 1
