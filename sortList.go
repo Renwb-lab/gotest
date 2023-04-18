@@ -53,7 +53,7 @@ func sortList(head *ListNode) *ListNode {
 	return ret
 }
 
-func main() {
+func main79() {
 	head := &ListNode{Val: -1}
 	head.Next = &ListNode{Val: 5}
 	head.Next.Next = &ListNode{Val: 3}

@@ -2,26 +2,26 @@ package main
 
 // https://leetcode.cn/problems/lru-cache/
 
-type Node struct {
+type LRUNode struct {
 	Key  int
 	Val  int
-	Next *Node
-	Pre  *Node
+	Next *LRUNode
+	Pre  *LRUNode
 }
 
 type LRUCache struct {
-	Head *Node
-	Tail *Node
-	Hash map[int]*Node
+	Head *LRUNode
+	Tail *LRUNode
+	Hash map[int]*LRUNode
 	cap  int
 }
 
 func Constructor1(capacity int) LRUCache {
-	head := &Node{Key: 0, Val: 0, Next: nil, Pre: nil}
-	tail := &Node{Key: 0, Val: 0, Next: nil, Pre: nil}
+	head := &LRUNode{Key: 0, Val: 0, Next: nil, Pre: nil}
+	tail := &LRUNode{Key: 0, Val: 0, Next: nil, Pre: nil}
 	head.Next = tail
 	tail.Pre = head
-	return LRUCache{Head: head, Tail: tail, cap: capacity, Hash: make(map[int]*Node)}
+	return LRUCache{Head: head, Tail: tail, cap: capacity, Hash: make(map[int]*LRUNode)}
 }
 
 func (this *LRUCache) Get(key int) int {
@@ -34,13 +34,13 @@ func (this *LRUCache) Get(key int) int {
 	}
 }
 
-func (this *LRUCache) removeNode(node *Node) {
+func (this *LRUCache) removeNode(node *LRUNode) {
 	node.Pre.Next = node.Next
 	node.Next.Pre = node.Pre
 	node.Next = nil
 	node.Pre = nil
 }
-func (this *LRUCache) addNodeInHead(node *Node) {
+func (this *LRUCache) addNodeInHead(node *LRUNode) {
 	node.Next = this.Head.Next
 	this.Head.Next.Pre = node
 
@@ -59,7 +59,7 @@ func (this *LRUCache) Put(key int, value int) {
 			delete(this.Hash, this.Tail.Pre.Key)
 			this.removeNode(this.Tail.Pre)
 		}
-		node := &Node{Key: key, Val: value, Next: nil, Pre: nil}
+		node := &LRUNode{Key: key, Val: value, Next: nil, Pre: nil}
 		this.Hash[key] = node
 		this.addNodeInHead(node)
 	}
