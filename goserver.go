@@ -21,7 +21,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "quick response")
 }
 
-func main102() {
+func main103() {
 	http.HandleFunc("/", indexHandler)
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {

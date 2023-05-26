@@ -85,7 +85,7 @@ func maxEnvelopes(envelopes [][]int) int {
 	return piles + 1
 }
 
-func main33() {
+func main93() {
 	envelopes := [][]int{
 		{46, 89},
 		{50, 53},
@@ -94,4 +94,39 @@ func main33() {
 		{77, 81},
 	}
 	fmt.Println(maxEnvelopes(envelopes))
+	fmt.Println(convertIp("255.255.255.255"))
+}
+
+func convertIp(s string) int {
+	ret, num, time := 0, 0, 0
+	for i := len(s) - 1; i >= 0; i -= 1 {
+		isDigit := s[i] >= '0' && s[i] <= '9'
+		if isDigit {
+			num = num*10 + int(s[i]-'0')
+		}
+		if s[i] == '.' || i == 0 {
+			for j := 0; j < time; j += 1 {
+				num *= 256
+			}
+			ret += num
+			num = 0
+			time += 1
+		}
+	}
+	return ret
+}
+
+func selectPair(arr []int, k int) [][]int {
+	ret := make([][]int, 0)
+	helper := make(map[int]int)
+	for _, v := range arr {
+		if n, ok := helper[k-v]; ok {
+			for t := 0; t < n; t += 1 {
+				ret = append(ret, []int{v, k - v})
+			}
+		} else {
+			helper[v] = 1
+		}
+	}
+	return ret
 }
