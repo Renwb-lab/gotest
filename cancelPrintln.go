@@ -31,11 +31,9 @@ func MainWorker() {
 	defer cancel()
 
 	var wg sync.WaitGroup
-	wg.Add(1)
-	defer func() {
-		wg.Wait()
-	}()
+	defer wg.Wait()
 
+	wg.Add(1)
 	go Worker(ctx, &wg)
 }
 

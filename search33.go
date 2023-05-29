@@ -4,7 +4,6 @@ import "fmt"
 
 // https://leetcode.cn/problems/search-in-rotated-sorted-array/
 // 33. 搜索旋转排序数组
-
 func search33(nums []int, target int) int {
 	// 按照有序数组的方式查询，只是说每次只能保证单边是有序的。
 	b, e := 0, len(nums)-1
@@ -32,7 +31,7 @@ func search33(nums []int, target int) int {
 	return -1
 }
 
-func main() {
+func main107() {
 	arr := []int{5, 1, 3}
 	fmt.Println(search33(arr, 0))
 }
