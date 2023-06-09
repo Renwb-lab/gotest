@@ -22,10 +22,9 @@ func getDescentPeriods(prices []int) int64 {
 	}
 	// 非常重要
 	ret += seqNum * (seqNum + 1) / 2
-
 	return int64(ret)
 }
 
-func main() {
+func main116() {
 	fmt.Println(getDescentPeriods([]int{8, 6, 7, 7}))
 }
