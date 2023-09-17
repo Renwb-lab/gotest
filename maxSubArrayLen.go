@@ -13,18 +13,18 @@ func maxSubArrayLen(nums []int, k int) int {
 		return b
 	}
 	helper := map[int]int{0: -1}
-	pre, ret := 0, 0
+	pre, res := 0, 0
 	for i, n := range nums {
 		current := pre + n
 		if _, ok := helper[current]; !ok {
 			helper[current] = i
 		}
 		if idx, ok := helper[current-k]; ok {
-			ret = max(ret, i-idx)
+			res = max(res, i-idx)
 		}
 		pre = current
 	}
-	return ret
+	return res
 }
 
 func main120() {

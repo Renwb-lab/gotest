@@ -24,14 +24,18 @@ func maxSlidingWindow(nums []int, k int) []int {
 		ret   = make([]int, l-k+1)
 	)
 	for i := 0; i < l; i++ {
+		// 从前向后移除超出的下标
 		for len(queue) > 0 && queue[0] <= i-k {
 			queue = queue[1:]
 		}
+		// 从后向前将小于当前的数字都踢出
 		for len(queue) > 0 && nums[queue[len(queue)-1]] <= nums[i] {
 			queue = queue[:len(queue)-1]
 		}
+		// 加入数据
 		queue = append(queue, i)
 		if i >= k-1 {
+			// 判断是否满足长度，满足的话，则添加进去。
 			ret[i-k+1] = nums[queue[0]]
 		}
 	}

@@ -36,8 +36,7 @@ func Constructor9() MedianFinder {
 func (this *MedianFinder) AddNum(num int) {
 	adjust := func() {
 		if this.biger[0] < this.small[0] {
-			n1 := heap.Pop(&this.biger)
-			n2 := heap.Pop(&this.small)
+			n1, n2 := heap.Pop(&this.biger), heap.Pop(&this.small)
 			heap.Push(&this.biger, n2)
 			heap.Push(&this.small, n1)
 		}

@@ -24,11 +24,12 @@ func merge(intervals [][]int) [][]int {
 			preStart, preEnd = intervals[i][0], intervals[i][1]
 		} else {
 			// 特别注意
-			if intervals[i][0] > preEnd {
+			if intervals[i][1] > preEnd {
 				preEnd = intervals[i][1]
 			}
 		}
 	}
+	// 最后的处理
 	if len(ret) == 0 || ret[len(ret)-1][1] != preEnd {
 		ret = append(ret, []int{preStart, preEnd})
 	}
