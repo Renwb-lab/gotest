@@ -62,7 +62,7 @@ func countPaths(n int, edges [][]int) int64 {
 	return res
 }
 
-func main() {
+func main151() {
 	fmt.Printf("%d\n", countPaths(5, [][]int{
 		{1, 2},
 		{1, 3},
