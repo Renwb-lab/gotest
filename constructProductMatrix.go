@@ -24,7 +24,7 @@ func constructProductMatrix(grid [][]int) [][]int {
 	return res
 }
 
-func main() {
+func main153() {
 	fmt.Println(constructProductMatrix([][]int{
 		{1, 2}, {3, 4}, {5, 6},
 	}))
