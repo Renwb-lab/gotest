@@ -56,7 +56,6 @@ func numberOfBoomerangs2(points [][]int) int {
 			ans += (c - 1) * c
 		}
 	}
-
 	return ans
 }
 
