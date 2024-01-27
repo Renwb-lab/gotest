@@ -28,7 +28,8 @@ func maximumSwap(num int) int {
 	idx1, idx2, maxIdx := -1, -1, l-1
 	// maxIdx: 表示从后向前遍历截止到i处最大的数值下标
 	// idx1: 表示从后向前遍历小于maxIdx的下标
-	// idx2: 表示当idx1小于maxIdx时maxIdx下标
+	// idx2: 表示当idx1小于maxIdx时maxIdx下标 保证：idx1 < idx2 && arr[idx1] < arr[idx2]
+	// 因为maxIdx还会向前移动，无法保证idx1 < maxIdx
 	// 98368
 	for i := l - 1; i >= 0; i -= 1 {
 		if arr[i] > arr[maxIdx] {
