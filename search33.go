@@ -12,6 +12,8 @@ func search33(nums []int, target int) int {
 		if nums[m] == target {
 			return m
 		}
+		//  nums[m] <= nums[e] 表示右段有序
+		//  nums[m] > nums[e]  表示左段有序
 		if nums[b] <= nums[m] {
 			// 保证 nums[b ... m] 是增加的
 			if target >= nums[b] && target < nums[m] {
