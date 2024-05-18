@@ -14,11 +14,7 @@ import "fmt"
 func StringTimes(content, word string) int {
 	need, visited := make(map[rune]int), make(map[rune]int)
 	for _, c := range word {
-		if _, ok := need[c]; !ok {
-			need[c] = 1
-		} else {
-			need[c] += 1
-		}
+		need[c] += 1
 	}
 
 	left, right, validNum := 0, 0, 0
@@ -26,11 +22,7 @@ func StringTimes(content, word string) int {
 	for right < len(content) {
 		c := rune(content[right])
 		if _, ok := need[c]; ok {
-			if _, ok := visited[c]; !ok {
-				visited[c] = 1
-			} else {
-				visited[c] += 1
-			}
+			visited[c] += 1
 			if visited[c] == need[c] {
 				validNum += 1
 			}
@@ -58,7 +50,7 @@ func StringTimes(content, word string) int {
 	return ret
 }
 
-func main6() {
+func main() {
 	{
 		content, word := "qweqwqew", "qwe"
 		r := StringTimes(content, word)

@@ -17,6 +17,12 @@ import (
  * }
  */
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 type Codec struct {
 }
 
@@ -40,15 +46,19 @@ func (this *Codec) deserialize(data string) *TreeNode {
 	var dp func() *TreeNode
 	idx, size := 0, len(data)
 	dp = func() *TreeNode {
+		if idx > size {
+			return nil
+		}
+		if data[idx] == '#' {
+			idx += 2 // 后移下标
+			return nil
+		}
 		pre := idx
 		for idx < size && data[idx] != '_' {
 			idx += 1
 		}
-		n, err := strconv.Atoi(string([]byte(data)[pre:idx]))
+		n, _ := strconv.Atoi(string([]byte(data)[pre:idx]))
 		idx += 1 // 注意即使为空节点，也要更新idx的数值
-		if err != nil {
-			return nil
-		}
 		root := &TreeNode{Val: n}
 		root.Left = dp()
 		root.Right = dp()
@@ -57,7 +67,7 @@ func (this *Codec) deserialize(data string) *TreeNode {
 	return dp()
 }
 
-func main74() {
+func main() {
 	str := "1_2_#_#_3_4_#_#_5_#_#"
 	t := Constructor5()
 	root := t.deserialize(str)

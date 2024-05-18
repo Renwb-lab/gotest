@@ -36,7 +36,7 @@ func targan(v, e int, nodes []string, edges [][]int) [][]string {
 			}
 			low[x] = min(low[x], low[y]) // 调整更新后的时间
 		}
-		if dfn[x] == low[x] { // 如果真实方法时间和调整后的时间相同的话，则认为没有子节点可以和上游形成连通分量了
+		if dfn[x] == low[x] { // 如果真实访问时间和调整后的时间相同的话，则认为没有子节点可以和上游形成连通分量了
 			line := []string{} // 进行出栈操作
 			for len(st) > 0 && st[len(st)-1] != x {
 				line = append(line, nodes[st[len(st)-1]])

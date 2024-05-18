@@ -57,6 +57,6 @@ func shortestBeautifulSubstring(s string, k int) string {
 	return r
 }
 
-func main141() {
+func main() {
 	fmt.Println(shortestBeautifulSubstring("001110101101101111", 10))
 }

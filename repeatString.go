@@ -11,6 +11,12 @@ import (
 // b. 重复次数相同的 , 字典序靠前的 , 排在前面 , 如 b2a2 , 应输出 aabb
 // 示例 :
 // 输入 : a4b2bac3bad3abcd2
+//		 aaaa			4
+//       bb				2
+//		 bacbacbac		3
+//       badbadbad		3
+//		 abcdabcd		2
+
 // 输出 : abcdabcdbbbacbacbacbadbadbadaaaa
 
 func repeatString(inStr string) string {

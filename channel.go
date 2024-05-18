@@ -28,4 +28,5 @@ func main() {
 	time.Sleep(time.Duration(1000))
 	fmt.Println(<-c)
 	wg.Wait()
+
 }

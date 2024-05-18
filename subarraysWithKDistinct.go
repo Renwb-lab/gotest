@@ -4,6 +4,7 @@ import "fmt"
 
 // https://leetcode.cn/problems/subarrays-with-k-different-integers/description/
 // 992. K 个不同整数的子数组
+// *****
 
 func subarraysWithKDistinct(nums []int, k int) int {
 	atMostKDistinct := func(nums []int, k int) int {

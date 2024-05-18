@@ -12,16 +12,38 @@ package main
  *     Next *ListNode
  * }
  */
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func reorderList(head *ListNode) {
-	arr := make([]*ListNode, 0)
-	for p := head; p != nil; p = p.Next {
-		arr = append(arr, p)
+	var dp func(inp *ListNode, in int)
+	outp := head
+	out := 0
+	dp = func(inp *ListNode, in int) {
+		if inp == nil {
+			return
+		}
+		dp(inp.Next, in+1)
+		if in <= out {
+			return
+		}
+		p1 := outp.Next
+		outp.Next = inp
+		outp.Next.Next = p1
+		outp = p1
+
+		out += 1
 	}
-	p, l := head, len(arr)
-	for i := 1; i < l/2; i += 1 {
-		pn := p.Next
-		p.Next = arr[l-1-i]
-		p.Next.Next = pn
-		p = pn
+	dp(head, 0)
+	if outp != nil {
+		outp.Next = nil
 	}
+}
+
+func main() {
+	head := &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, nil}}}}
+	reorderList(head)
 }

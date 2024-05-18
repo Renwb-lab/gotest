@@ -17,6 +17,7 @@ func quickSort(arr []int) {
 }
 
 func findMiddileV1(arr []int, l, r int) int {
+	// arr[l, idx) < t
 	t, idx := arr[r], l-1       // r 是最后一个
 	for i := l; i < r; i += 1 { // 不能遍历到最后一个
 		if arr[i] < t {

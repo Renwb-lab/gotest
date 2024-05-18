@@ -13,8 +13,8 @@ func sumOfDistancesInTree(n int, edges [][]int) []int {
 		g[v] = append(g[v], u)
 	}
 
-	size := make([]int, n)
-	ans := make([]int, n)
+	size := make([]int, n) // 每个节点作为根节点，包含的子节点数量
+	ans := make([]int, n)  // 结果
 	var dfs func(int, int, int)
 	dfs = func(u, fu, h int) {
 		ans[0] += h
@@ -33,6 +33,8 @@ func sumOfDistancesInTree(n int, edges [][]int) []int {
 	reroot = func(u, fu int) {
 		for _, v := range g[u] {
 			if v != fu {
+				// u -> v
+				// 距离v中的节点变近了（ - size[v]），不在v中的节点变远了(+ n - size[v])
 				ans[v] += ans[u] + n - 2*size[v]
 				reroot(v, u)
 			}

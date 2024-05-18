@@ -8,6 +8,35 @@ import "fmt"
 // 输出：[1,2,3,6,9,8,7,4,5]
 
 func spiralOrder(matrix [][]int) []int {
+	res := make([]int, 0)
+	up, down := 0, len(matrix)
+	left, right := 0, len(matrix[0])
+	for up < down && left < right {
+		// left -> right
+		for i := left; i < right; i += 1 {
+			res = append(res, matrix[up][i])
+		}
+		up += 1
+		// up -> down
+		for j := up; j < down; j += 1 {
+			res = append(res, matrix[j][right-1])
+		}
+		right -= 1
+		// right -> left
+		for i := right - 1; i >= left; i -= 1 {
+			res = append(res, matrix[down-1][i])
+		}
+		down -= 1
+		// down -> up
+		for j := down - 1; j >= up; j -= 1 {
+			res = append(res, matrix[j][left])
+		}
+		left += 1
+	}
+	return res
+}
+
+func spiralOrderV1(matrix [][]int) []int {
 	l, r := len(matrix), len(matrix[0])
 	minx, maxx := 0, l-1
 	miny, maxy := 0, r-1
@@ -38,7 +67,7 @@ func spiralOrder(matrix [][]int) []int {
 	return ret
 }
 
-func main25() {
+func main() {
 	matrix := [][]int{
 		{1, 2, 3},
 		{4, 5, 6},

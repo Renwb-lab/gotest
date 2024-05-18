@@ -21,7 +21,6 @@ func main90() {
 		wg.Add(1)
 
 		i := i
-
 		go func() {
 			defer wg.Done()
 			worker(i)

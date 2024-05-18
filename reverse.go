@@ -19,7 +19,7 @@ func reverse(x int) int {
 	return r
 }
 
-func main28() {
-	// fmt.Println(reverse(-123))
-	fmt.Println(reverse(1534236469))
+func main() {
+	fmt.Println(reverse(-123))
+	// fmt.Println(reverse(1534236469))
 }

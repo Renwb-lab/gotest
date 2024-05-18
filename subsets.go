@@ -6,6 +6,20 @@ import (
 
 // https://leetcode.cn/problems/power-set-lcci/?favorite=xb9lfcwi
 
+func subsetsV1(nums []int) [][]int {
+	res := make([][]int, 0)
+	line := make([]int, 0)
+	res = append(res, line)
+	for i := 0; i < len(nums); i += 1 {
+		for _, old := range res {
+			line = append([]int{}, old...)
+			line = append(line, nums[i])
+			res = append(res, line)
+		}
+	}
+	return res
+}
+
 func subsets(nums []int) [][]int {
 	ret := make([][]int, 0)
 	ret = append(ret, []int{})
@@ -30,9 +44,9 @@ func subsets(nums []int) [][]int {
 	return ret
 }
 
-func main11() {
+func main() {
 	nums := []int{9, 0, 3, 5, 7}
-	ret := subsets(nums)
+	ret := subsetsV1(nums)
 	for _, line := range ret {
 		for _, n := range line {
 			fmt.Printf("%d\t", n)

@@ -23,7 +23,7 @@ func ExistWithSecond(ctx context.Context, n int) {
 	fmt.Printf("exist with %d second\n", n)
 }
 
-func main102() {
+func main() {
 	ctx, cancel := context.WithTimeout(context.TODO(), 2*time.Second)
 	defer cancel()
 

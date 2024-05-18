@@ -73,6 +73,8 @@ func splitArray(nums []int, m int) int {
 		mid := left + (right-left)>>1
 		// 分成cnt段的最大值为mid
 		// 分的段越多，则意味着最大值越小。
+		// [1, 20) mid 10 -> cnt 5		m:
+
 		cnt := check(mid)
 		if cnt <= m {
 			right = mid // [left, mid)
