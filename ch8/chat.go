@@ -5,7 +5,13 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"time"
 )
+
+// go build ch8/chat
+// go build echo/netcat3.go
+// ./chat
+// ./netcat3
 
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
@@ -39,7 +45,7 @@ func broadcaster() {
 			// Broadcast incoming message to all
 			// clients' outgoing message channels.
 			for cli := range clients {
-				cli <- msg
+				cli <- "[" + time.Now().String() + "] " + msg // 这里cli是channel, 和 64行的代码向对应，存在79行的协程将信息回写到用户那边
 			}
 		case cli := <-entering:
 			clients[cli] = true
@@ -56,7 +62,7 @@ func handleConn(conn net.Conn) {
 	go clientWriter(conn, ch)
 
 	who := conn.RemoteAddr().String()
-	ch <- "You are " + who
+	ch <- "[" + time.Now().String() + "] You are " + who // 向用户中写入信息
 	messages <- who + " has arrived"
 	entering <- ch
 

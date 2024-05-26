@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func getWinner(arr []int, k int) int {
 	max := func(x, y int) int {

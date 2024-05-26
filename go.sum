@@ -1,4 +1,8 @@
 github.com/panjf2000/ants v1.2.1 h1:IlhLREssFi+YFOITnHdH3FHhulY6WDS0OB9e7+3fMHk=
 github.com/panjf2000/ants v1.2.1/go.mod h1:AaACblRPzq35m1g3enqYcxspbbiOJJYaxU2wMpm1cXY=
+golang.org/x/net v0.20.0 h1:aCL9BSgETF1k+blQaYUBx9hJ9LOGP3gAVemcZlf1Kpo=
+golang.org/x/net v0.20.0/go.mod h1:z8BVo6PvndSri0LbOE3hAn0apkU+1YvI6E70E9jsnvY=
+golang.org/x/sync v0.5.0 h1:60k92dhOjHxJkrqnwsfl8KuaHbn/5dl0lUPUklKo3qE=
+golang.org/x/sync v0.5.0/go.mod h1:Czt+wKu1gCyEFDUtn0jG5QVvpJ6rzVqr5aXyt9drQfk=
 gopkg.in/go-playground/pool.v3 v3.1.1 h1:4Qcj91IsYTpIeRhe/eo6Fz+w6uKWPEghx8vHFTYMfhw=
 gopkg.in/go-playground/pool.v3 v3.1.1/go.mod h1:pUAGBximS/hccTTSzEop6wvvQhVa3QPDFFW+8REdutg=

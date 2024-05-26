@@ -24,6 +24,6 @@ func findIndices(nums []int, indexDifference int, valueDifference int) []int {
 	return []int{-1, -1}
 }
 
-func main153() {
+func main() {
 	fmt.Println(findIndices([]int{5, 1, 4, 1}, 2, 3))
 }
