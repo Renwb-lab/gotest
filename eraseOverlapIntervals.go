@@ -52,7 +52,7 @@ func eraseOverlapIntervals2(intervals [][]int) int {
 	return n - res
 }
 
-func main() {
+func main071040() {
 	fmt.Println(eraseOverlapIntervals([][]int{
 		{-52, 31}, {-73, -26}, {82, 97}, {-65, -11}, {-62, -49}, {95, 99}, {58, 95}, {-31, 49}, {66, 98}, {-63, 2}, {30, 47}, {-40, -26},
 	}))

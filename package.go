@@ -14,7 +14,7 @@ func max(xs ...int) int {
 	return t
 }
 
-func main() {
+func main287() {
 	n, m := 0, 0
 	fmt.Scan(&n, &m)
 	n = n / 10

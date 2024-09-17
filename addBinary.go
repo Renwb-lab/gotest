@@ -51,6 +51,6 @@ func addBinary(a string, b string) string {
 	return string(s[loc+1:])
 }
 
-func main() {
+func main0710() {
 	fmt.Println(addBinary("0", "0"))
 }

@@ -126,7 +126,7 @@ func waysToChange2(n int) int {
 	return dp[n] % 1000000007
 }
 
-func main() {
+func main325() {
 	fmt.Println(waysToChange(64))
 
 	fmt.Println(waysToChange1(5))

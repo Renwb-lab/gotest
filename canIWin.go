@@ -36,6 +36,6 @@ func canIWin(maxChoosableInteger int, desiredTotal int) bool {
 	return dfs(0, 0)
 }
 
-func main() {
+func main071012() {
 	fmt.Println(canIWin(10, 40))
 }

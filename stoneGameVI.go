@@ -43,7 +43,7 @@ func stoneGameVI(aliceValues []int, bobValues []int) int {
 	return -1
 }
 
-func main() {
+func main314() {
 	fmt.Println(stoneGameVI(
 		[]int{2, 9, 1, 1, 1, 3, 5, 8, 8, 6, 8, 6, 2, 4},
 		[]int{1, 9, 7, 8, 3, 4, 2, 7, 8, 10, 1, 7, 10, 4}))

@@ -80,6 +80,6 @@ func reverse(s string) string {
 	return string(runes)
 }
 
-func main() {
+func main071025() {
 	fmt.Println(count("1", "12", 1, 8))
 }

@@ -26,7 +26,7 @@ func (s *OrderedStack) Put(x int) int {
 	}
 }
 
-func main() {
+func main289() {
 	s := NewOrderedStack()
 	arr := []int{3, 2, 1, 5, 6, 3}
 	for _, x := range arr {

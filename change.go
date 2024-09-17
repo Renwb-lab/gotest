@@ -77,7 +77,7 @@ func change2(amount int, coins []int) int {
 	return dp[amount]
 }
 
-func main() {
+func main071017() {
 	fmt.Println(change(5, []int{1, 2, 5}))
 	fmt.Println(change1(5, []int{1, 2, 5}))
 	fmt.Println(change2(5, []int{1, 2, 5}))

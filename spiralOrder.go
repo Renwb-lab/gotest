@@ -67,7 +67,7 @@ func spiralOrderV1(matrix [][]int) []int {
 	return ret
 }
 
-func main() {
+func main309() {
 	matrix := [][]int{
 		{1, 2, 3},
 		{4, 5, 6},

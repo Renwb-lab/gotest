@@ -11,12 +11,6 @@ import "fmt"
  * }
  */
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 type BSTIterator2 struct {
 	cur   *TreeNode
 	stack []*TreeNode
@@ -47,7 +41,7 @@ func (this *BSTIterator2) HasNext() bool {
 	return this.cur != nil || len(this.stack) > 0
 }
 
-func main() {
+func main07104() {
 	root := &TreeNode{
 		Val: 7,
 		Left: &TreeNode{

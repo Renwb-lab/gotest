@@ -51,6 +51,6 @@ func grab_moneys(money float32, people int) []float32 {
 	return res
 }
 
-func main() {
+func main071050() {
 	fmt.Println(grab_moneys(1, 99))
 }

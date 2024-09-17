@@ -24,6 +24,6 @@ func getRow(rowIndex int) []int {
 	return res
 }
 
-func main() {
+func main254() {
 	fmt.Println(getRow(3))
 }

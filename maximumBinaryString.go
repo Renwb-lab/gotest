@@ -36,6 +36,6 @@ func maximumBinaryStringV1(binary string) string {
 	return string(s)
 }
 
-func main() {
+func main261() {
 	fmt.Println(maximumBinaryStringV1("000110"))
 }

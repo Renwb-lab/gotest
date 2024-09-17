@@ -137,7 +137,7 @@ func nearestPalindromic(n string) string {
 	return res
 }
 
-func main() {
+func main279() {
 	fmt.Println(nearestPalindromic1("1213"))
 	fmt.Println(nearestPalindromic("1"))
 }

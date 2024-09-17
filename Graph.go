@@ -13,7 +13,7 @@ func min(x, y int) int {
 
 type Graph [][]int
 
-func Constructor(n int, edges [][]int) Graph {
+func Constructor13(n int, edges [][]int) Graph {
 	g := make([][]int, n)
 	for i := range g {
 		g[i] = make([]int, n)

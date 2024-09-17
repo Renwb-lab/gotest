@@ -28,6 +28,6 @@ func maxBalancedSubsequenceSum(nums []int) int64 {
 	return r
 }
 
-func main() {
+func main259() {
 	fmt.Println(maxBalancedSubsequenceSum([]int{3, 3, 5, 6}))
 }

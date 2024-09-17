@@ -29,6 +29,6 @@ func minLength(s string) int {
 	return len(arr)
 }
 
-func main() {
+func main276() {
 	fmt.Println(minLength("ABFCACDB"))
 }

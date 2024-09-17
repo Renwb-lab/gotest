@@ -46,6 +46,6 @@ func maximumSwap(num int) int {
 	return res
 }
 
-func main() {
+func main251() {
 	fmt.Println(maximumSwap(2736))
 }

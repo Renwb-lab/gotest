@@ -38,6 +38,6 @@ func minimumTime(nums1 []int, nums2 []int, x int) int {
 	return -1
 }
 
-func main() {
+func main269() {
 	fmt.Println(minimumTime([]int{1, 2, 3}, []int{1, 2, 3}, 4))
 }

@@ -17,6 +17,6 @@ func singleNonDuplicate(nums []int) int {
 	return b
 }
 
-func main() {
+func main306() {
 	fmt.Println(singleNonDuplicate([]int{1, 1, 2, 3, 3, 4, 4, 8, 8}))
 }

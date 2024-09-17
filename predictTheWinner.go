@@ -143,6 +143,6 @@ func predictTheWinner3(nums []int) bool {
 	return 2*mp[0][l-1] >= sum
 }
 
-func main() {
+func main292() {
 	fmt.Println(predictTheWinner3([]int{1, 5, 3, 7}))
 }

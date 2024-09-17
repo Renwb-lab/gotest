@@ -37,7 +37,7 @@ func (rp *RedPackege) GetRandomMoney() float64 {
 	return money
 }
 
-func main() {
+func main253() {
 	for i := 0; i < 100; i += 1 {
 		rp := NewRedPackege(100, 5)
 		sumMoney := float64(0.0)

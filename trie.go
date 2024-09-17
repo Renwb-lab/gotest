@@ -16,7 +16,7 @@ type Trie struct {
 	Next  []*Trie
 }
 
-func Constructor3() Trie {
+func Constructor15() Trie {
 	return Trie{
 		IsEnd: false,
 		Next:  make([]*Trie, 26),
@@ -27,7 +27,7 @@ func (this *Trie) Insert(word string) {
 	p := this
 	for _, c := range word {
 		if p.Next[c-'a'] == nil {
-			node := Constructor3()
+			node := Constructor15()
 			p.Next[c-'a'] = &node
 		}
 		p = p.Next[c-'a']

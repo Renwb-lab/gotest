@@ -36,7 +36,7 @@ func (this *SnapshotArray) Get(index int, snap_id int) int {
 	return this.data[index][x-1][1]
 }
 
-func main() {
+func main07103() {
 	s := Constructor3(5)
 	s.Set(0, 5)
 	fmt.Println(s.Snap())

@@ -58,7 +58,7 @@ func targan(v, e int, nodes []string, edges [][]int) [][]string {
 	return res
 }
 
-func main() {
+func main318() {
 
 	// 					a
 	// 				/.	 \`   \.

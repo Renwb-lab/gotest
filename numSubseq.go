@@ -35,6 +35,6 @@ func numSubseq(nums []int, target int) int {
 	return ans
 }
 
-func main() {
+func main286() {
 	fmt.Println(numSubseq([]int{2, 3, 3, 4, 6, 7}, 12))
 }

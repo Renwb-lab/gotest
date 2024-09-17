@@ -5,9 +5,7 @@ import (
 	"fmt"
 )
 
-const base = 10
-
-type Node struct {
+type MNode struct {
 	key   int
 	value int
 }
@@ -15,7 +13,8 @@ type MyHashMap struct {
 	m []list.List
 }
 
-func Constructor() MyHashMap {
+func Constructor11() MyHashMap {
+	const base = 10
 	return MyHashMap{
 		m: make([]list.List, 1<<base),
 	}
@@ -27,7 +26,7 @@ func (this *MyHashMap) Put(key int, value int) {
 	if it != nil {
 		this.m[idx].Remove(it)
 	}
-	this.m[idx].PushBack(&Node{key, value})
+	this.m[idx].PushBack(&MNode{key, value})
 	return
 }
 
@@ -37,7 +36,7 @@ func (this *MyHashMap) Get(key int) int {
 	if it == nil {
 		return -1
 	}
-	return it.Value.(*Node).value
+	return it.Value.(*MNode).value
 }
 
 func (this *MyHashMap) Remove(key int) {
@@ -56,7 +55,7 @@ func (this *MyHashMap) hash(key int) int {
 func (this *MyHashMap) contain(idx, key int) *list.Element {
 	it := this.m[idx].Front()
 	for it != nil {
-		t := it.Value.(*Node)
+		t := it.Value.(*MNode)
 		if t.key == key {
 			return it
 		}
@@ -72,8 +71,8 @@ func (this *MyHashMap) contain(idx, key int) *list.Element {
  * param_2 := obj.Get(key);
  * obj.Remove(key);
  */
-func main() {
-	obj := Constructor()
+func main07102() {
+	obj := Constructor11()
 	// key, value := 1, 2
 	// obj.Put(key, value)
 	// fmt.Println(obj.Get(key))

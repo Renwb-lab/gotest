@@ -37,6 +37,6 @@ func largestTimeFromDigits(arr []int) string {
 	return res
 }
 
-func main() {
+func main246() {
 	fmt.Println(largestTimeFromDigits([]int{1, 2, 3, 4}))
 }

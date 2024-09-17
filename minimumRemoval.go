@@ -20,6 +20,6 @@ func minimumRemoval(beans []int) int64 {
 
 }
 
-func main() {
+func main272() {
 	fmt.Println(minimumRemoval([]int{2, 10, 3, 2}))
 }

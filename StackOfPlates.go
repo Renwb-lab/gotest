@@ -7,7 +7,7 @@ type StackOfPlates struct {
 	cap  int
 }
 
-func Constructor(cap int) StackOfPlates {
+func Constructor14(cap int) StackOfPlates {
 	return StackOfPlates{data: make([][]int, 0), cap: cap}
 }
 

@@ -43,6 +43,6 @@ func numberOfSequence(n int, sick []int) int {
 	return ans % mod
 }
 
-func main() {
+func main328() {
 	fmt.Println(numberOfSequence(5, []int{0, 4}))
 }

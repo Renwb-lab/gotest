@@ -37,7 +37,7 @@ func minIncrements(n int, cost []int) int {
 	return res
 }
 
-func main() {
+func main278() {
 	fmt.Println(minIncrements(15, []int{
 		764,
 		1460, 2664,

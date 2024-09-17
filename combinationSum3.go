@@ -33,6 +33,6 @@ func combinationSum3(k int, n int) [][]int {
 	return res
 }
 
-func main() {
+func main071020() {
 	fmt.Print(combinationSum3(9, 45))
 }

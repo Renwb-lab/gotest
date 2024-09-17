@@ -46,7 +46,7 @@ func findMiddileV2(arr []int, l, r int) int {
 	return l
 }
 
-func main() {
+func main293() {
 	arr := []int{5, 6, 2, 2, 3}
 	quickSort(arr)
 	fmt.Println(arr)

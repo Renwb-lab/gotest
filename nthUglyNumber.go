@@ -35,6 +35,6 @@ func nthUglyNumber(n int) int {
 	return helper[n]
 }
 
-func main() {
+func main283() {
 	fmt.Println(nthUglyNumber(10))
 }

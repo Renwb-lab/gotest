@@ -23,7 +23,7 @@ type BSTIterator struct {
 	c2   []int
 }
 
-func Constructor(root *TreeNode) BSTIterator {
+func Constructor7(root *TreeNode) BSTIterator {
 	c := make(chan *TreeNode)
 	bst := BSTIterator{
 		root: root,
@@ -74,7 +74,7 @@ func (this *BSTIterator) HasNext() bool {
 	return ok
 }
 
-func main() {
+func main07101() {
 	root := &TreeNode{
 		Val: 7,
 		Left: &TreeNode{
@@ -90,7 +90,7 @@ func main() {
 			},
 		},
 	}
-	bSTIterator := Constructor(root)
+	bSTIterator := Constructor7(root)
 	fmt.Println(bSTIterator.Next())    // 返回 3
 	fmt.Println(bSTIterator.Next())    // 返回 7
 	fmt.Println(bSTIterator.HasNext()) // 返回 True

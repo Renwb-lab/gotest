@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main321() {
 	{
 		var c chan int
 		c <- 1

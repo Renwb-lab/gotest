@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func main071014() {
 	rand.Seed(time.Now().UnixNano())
 	const Max = 100000
 	const NumReceivers = 10

@@ -100,7 +100,7 @@ func numDecodings3(s string) int {
 	return c
 }
 
-func main() {
+func main288() {
 	fmt.Println(numDecodings("12"))
 	fmt.Println(numDecodings2("2101"))
 	fmt.Println(numDecodings3("2101"))

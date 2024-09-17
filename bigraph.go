@@ -52,7 +52,7 @@ func (bg *BiGraph) GetAssign() map[int]int {
 	return ans
 }
 
-func main() {
+func main07108() {
 	// 主函数为上图中二分图示例的情况
 	n, m := 3, 4
 	assigned := make([]int, m)

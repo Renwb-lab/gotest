@@ -58,7 +58,7 @@ func shoppingOffers(price []int, special [][]int, needs []int) int {
 	return ans
 }
 
-func main() {
+func main307() {
 	fmt.Println(shoppingOffers(
 		[]int{9},
 		[][]int{

@@ -16,6 +16,7 @@ func countWays(nums []int) int {
 
 	l := len(nums)
 	check := func(s int) bool {
+		// 左边的都选
 		if s == 0 {
 			return nums[0] > 0
 		}

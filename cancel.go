@@ -66,7 +66,7 @@ func testFunc(loop int) func(ctx context.Context) int {
 	}
 }
 
-func main() {
+func main071019() {
 	begin := time.Now()
 	fmt.Println(RunFuncWithTime(testFunc(5), 2))
 	fmt.Println(time.Now().Sub(begin).String())

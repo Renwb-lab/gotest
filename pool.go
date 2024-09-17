@@ -11,7 +11,7 @@ type MyObject struct {
 	// 其他字段...
 }
 
-func main() {
+func main291() {
 	pool := &sync.Pool{
 		New: func() interface{} {
 			fmt.Println("Creating new object")

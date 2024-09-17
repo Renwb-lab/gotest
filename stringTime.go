@@ -50,7 +50,7 @@ func StringTimes(content, word string) int {
 	return ret
 }
 
-func main() {
+func main315() {
 	{
 		content, word := "qweqwqew", "qwe"
 		r := StringTimes(content, word)

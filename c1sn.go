@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func main07107() {
 	rand.Seed(time.Now().UnixNano())
 
 	const Max = 100000

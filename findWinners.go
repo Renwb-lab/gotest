@@ -1,6 +1,8 @@
 package main
 
-import "slices"
+import (
+	"sort"
+)
 
 func findWinners(matches [][]int) [][]int {
 	lossCount := map[int]int{}
@@ -19,11 +21,11 @@ func findWinners(matches [][]int) [][]int {
 		}
 	}
 
-	slices.Sort(ans[0])
-	slices.Sort(ans[1])
+	sort.Slice(ans[0], func(i, j int) bool { return ans[0][i] < ans[0][j] })
+	sort.Slice(ans[1], func(i, j int) bool { return ans[1][i] < ans[1][j] })
 	return ans
 }
 
-func main() {
+func main15() {
 
 }

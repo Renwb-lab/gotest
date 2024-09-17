@@ -39,6 +39,6 @@ func minExtraChar(s string, dictionary []string) int {
 	return helper[n]
 }
 
-func main() {
+func main265() {
 	fmt.Println(minExtraChar("leetscode", []string{"leet", "code", "leetcode"}))
 }

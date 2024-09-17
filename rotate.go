@@ -63,7 +63,7 @@ func rotate(matrix [][]int) {
 	}
 }
 
-func main() {
+func main300() {
 	matrix := [][]int{
 		{5, 1, 9, 11},
 		{2, 4, 8, 10},

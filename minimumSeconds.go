@@ -34,6 +34,6 @@ func minimumSeconds(nums []int) int {
 	return ans
 }
 
-func main() {
+func main268() {
 	fmt.Print(minimumSeconds([]int{1, 2, 3, 4, 5}))
 }

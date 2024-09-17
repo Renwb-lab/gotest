@@ -7,7 +7,7 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-func main() {
+func main071034() {
 	var g errgroup.Group
 	var urls = []string{
 		"http://blog.csdn.net/",

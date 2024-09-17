@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func main290() {
 	n := 0
 	_, _ = fmt.Scan(&n)
 	one, two := []int{}, []int{}

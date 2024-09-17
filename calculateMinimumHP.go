@@ -43,7 +43,7 @@ func calculateMinimumHP(dungeon [][]int) int {
 	return dungeon[0][0]
 }
 
-func main() {
+func main07106() {
 	fmt.Println(calculateMinimumHP([][]int{
 		{1, -2, 3},
 		{2, -2, -2},

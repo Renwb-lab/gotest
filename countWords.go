@@ -22,7 +22,7 @@ func countWords(words1 []string, words2 []string) int {
 	return ans
 }
 
-func main() {
+func main071028() {
 	fmt.Println(countWords(
 		[]string{"leetcode", "is", "amazing", "as", "is"},
 		[]string{"amazing", "leetcode", "is"}))

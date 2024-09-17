@@ -54,6 +54,6 @@ func removeKdigitsV1(num string, k int) string {
 	return res
 }
 
-func main() {
+func main294() {
 	fmt.Println(removeKdigitsV1("1234567890", 9))
 }

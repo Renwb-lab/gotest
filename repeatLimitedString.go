@@ -89,6 +89,6 @@ func repeatLimitedString2(s string, repeatLimit int) string {
 	return string(res)
 }
 
-func main() {
+func main298() {
 	fmt.Println(repeatLimitedString("aababab", 2))
 }

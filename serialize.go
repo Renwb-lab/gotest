@@ -17,11 +17,11 @@ import (
  * }
  */
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
 
 type Codec struct {
 }
@@ -67,7 +67,7 @@ func (this *Codec) deserialize(data string) *TreeNode {
 	return dp()
 }
 
-func main() {
+func main303() {
 	str := "1_2_#_#_3_4_#_#_5_#_#"
 	t := Constructor5()
 	root := t.deserialize(str)

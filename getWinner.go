@@ -30,6 +30,6 @@ func getWinner(arr []int, k int) int {
 	return maxValue
 }
 
-func main() {
+func main243() {
 	fmt.Println(getWinner([]int{2, 1, 3, 5, 4, 6, 7}, 2))
 }

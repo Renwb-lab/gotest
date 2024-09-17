@@ -38,7 +38,7 @@ func diagonalSort(mat [][]int) [][]int {
 	return r
 }
 
-func main() {
+func main071030() {
 	fmt.Println(diagonalSort([][]int{
 		{3, 3, 1, 1},
 		{2, 2, 1, 2},

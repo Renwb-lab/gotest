@@ -24,6 +24,6 @@ func longestEqualSubarray(nums []int, k int) int {
 	return ans
 }
 
-func main() {
+func main248() {
 	fmt.Println(longestEqualSubarray([]int{1, 3, 2, 3, 1, 3}, 2))
 }

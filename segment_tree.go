@@ -84,7 +84,7 @@ func (tree *segmentTree) Query(begin int, end int) int {
 	return tree.root.Query(tree, begin, end)
 }
 
-func main() {
+func main304() {
 	{
 		max := func(oldValue, newValue int) int {
 			if oldValue > newValue {

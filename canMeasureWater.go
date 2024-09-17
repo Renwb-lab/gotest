@@ -67,6 +67,6 @@ func canMeasureWater(x int, y int, z int) bool {
 	return z%gcd(x, y) == 0
 
 }
-func main() {
+func main071013() {
 	fmt.Println(canMeasureWater(3, 5, 4))
 }

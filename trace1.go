@@ -5,7 +5,7 @@ import (
 	"runtime/trace"
 )
 
-func main() {
+func main323() {
 	trace.Start(os.Stderr)
 	defer trace.Stop()
 	ch := make(chan string)

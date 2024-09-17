@@ -21,6 +21,6 @@ func sumIndicesWithKSetBits(nums []int, k int) int {
 	return res
 }
 
-func main() {
+func main317() {
 	fmt.Println(sumIndicesWithKSetBits([]int{5, 10, 1, 5, 2}, 1))
 }

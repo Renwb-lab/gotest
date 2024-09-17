@@ -52,7 +52,7 @@ func isMask(ip string) bool {
 	return (b & (b - 1)) == 0
 }
 
-func main() {
+func main245() {
 	// reader := bufio.NewReader(os.Stdin)
 	var A string
 	a, b, c, d, e, f, g := 0, 0, 0, 0, 0, 0, 0

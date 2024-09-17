@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func main071016() {
 	c := make(chan int, 2)
 	wg := &sync.WaitGroup{}
 	wg.Add(3)

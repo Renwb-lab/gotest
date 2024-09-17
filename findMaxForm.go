@@ -124,7 +124,7 @@ func findMaxForm3(strs []string, m int, n int) int {
 	return ans
 }
 
-func main() {
+func main071031() {
 	fmt.Println(findMaxForm([]string{
 		"10", "0001", "111001", "1", "0",
 	}, 3, 4))

@@ -27,6 +27,6 @@ func combinationSum(candidates []int, target int) [][]int {
 	return res
 }
 
-func main() {
+func main071027() {
 	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
 }

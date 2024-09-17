@@ -59,7 +59,7 @@ func numberOfBoomerangs2(points [][]int) int {
 	return ans
 }
 
-func main() {
+func main284() {
 	fmt.Println(numberOfBoomerangs([][]int{
 		{0, 0},
 		{1, 0},

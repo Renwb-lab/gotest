@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 // 从调整排序后的数组中查找指定的数据
+// 常见题目 --> findMin.go
 func findNumFromArr(arr []int, target int) int {
 	b, e := 0, len(arr)-1
 	for b <= e {
@@ -11,12 +12,14 @@ func findNumFromArr(arr []int, target int) int {
 			return m
 		}
 		if arr[b] <= arr[m] {
+			// 左侧有序
 			if target >= arr[b] && target < arr[m] {
 				e = m - 1
 			} else {
 				b = m + 1
 			}
 		} else {
+			// 右侧有序
 			if target > arr[m] && target <= arr[e] {
 				b = m + 1
 			} else {

@@ -59,7 +59,7 @@ func mergeSortV2(arr []int) {
 	}
 }
 
-func main() {
+func main271() {
 	arr := []int{5, 6, 2, 2, 3, 2, 3, 9, 0, 8}
 	mergeSortV2(arr)
 	fmt.Println(arr)

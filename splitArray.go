@@ -85,6 +85,6 @@ func splitArray(nums []int, m int) int {
 	return left
 }
 
-func main() {
+func main311() {
 	fmt.Println(splitArray([]int{7, 2, 5, 10, 8}, 2))
 }

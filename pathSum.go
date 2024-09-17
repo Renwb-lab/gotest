@@ -1,11 +1,11 @@
 package main
 
 // https://leetcode.cn/problems/paths-with-sum-lcci/solutions/
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
 
 func pathSum(root *TreeNode, sum int) int {
 	st, ret := make([]*TreeNode, 0), 0

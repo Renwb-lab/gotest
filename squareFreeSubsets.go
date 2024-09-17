@@ -41,7 +41,7 @@ func squareFreeSubsets(nums []int) int {
 	return (ans - 1) % mod // -1 去掉空集（nums 的空子集）
 }
 
-func main() {
+func main312() {
 	fmt.Println(squareFreeSubsets([]int{3, 5, 21, 20, 10,
 		2, 29, 18, 28, 1, 29, 15, 18, 3, 22, 19, 3, 14,
 		22, 15, 18, 13, 12, 26, 12, 26, 17, 10, 6, 19, 21,

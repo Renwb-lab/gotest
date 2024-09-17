@@ -19,7 +19,7 @@ func leftBound(arr []int, target int) int {
 	return l
 }
 
-func main() {
+func main258() {
 	arr := []int{2, 3, 6, 6, 6, 7, 8, 10}
 	fmt.Println(leftBound(arr, 6))
 	fmt.Println(leftBound(arr, 3))

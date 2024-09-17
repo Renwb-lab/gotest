@@ -21,6 +21,6 @@ func canConstruct(ransomNote string, magazine string) bool {
 	return true
 }
 
-func main() {
+func main07105() {
 	fmt.Println(canConstruct("aab", "baa"))
 }

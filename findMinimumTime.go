@@ -26,7 +26,7 @@ func findMinimumTime(tasks [][]int) int {
 	return res
 }
 
-func main() {
+func main241() {
 	fmt.Println(findMinimumTime(
 		[][]int{
 			{1, 3, 2},

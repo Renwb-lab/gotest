@@ -48,7 +48,7 @@ func downAdjust(arr []int, cur, end int) {
 	}
 }
 
-func main() {
+func main207() {
 	arr := []int{5, 6, 2, 2, 3}
 	heapSort(arr)
 	fmt.Println(arr)

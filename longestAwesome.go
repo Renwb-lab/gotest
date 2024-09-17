@@ -35,6 +35,6 @@ func longestAwesome(s string) int {
 	return ans
 }
 
-func main() {
+func main257() {
 	fmt.Println(longestAwesome("24142"))
 }

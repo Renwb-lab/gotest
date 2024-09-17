@@ -38,6 +38,6 @@ func addMinimum(word string) int {
 	return res
 }
 
-func main() {
+func main071010() {
 	fmt.Println(addMinimum("cba"))
 }

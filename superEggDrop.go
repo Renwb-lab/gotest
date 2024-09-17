@@ -136,6 +136,6 @@ func superEggDropV2(k int, n int) int {
 	return 0
 }
 
-func main() {
+func main320() {
 	fmt.Println(superEggDrop(2, 6))
 }

@@ -13,7 +13,7 @@ func computeCost() func() {
 	}
 }
 
-func main() {
+func main071029() {
 	defer computeCost()()
 	time.Sleep(time.Second)
 }

@@ -39,6 +39,6 @@ func nthSuperUglyNumber(n int, primes []int) int {
 	return helper[n]
 }
 
-func main() {
+func main281() {
 	fmt.Println(nthSuperUglyNumber(12, []int{2, 7, 13, 19}))
 }

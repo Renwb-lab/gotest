@@ -38,7 +38,7 @@ func robot(command string, obstacles [][]int, x int, y int) bool {
 	return true
 }
 
-func main() {
+func main302() {
 	fmt.Println(robot("RRU", [][]int{{5, 5},
 		{9, 4},
 		{9, 7},

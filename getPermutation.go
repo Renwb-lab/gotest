@@ -66,6 +66,6 @@ func getPermutationV1(n int, k int) string {
 	return string(res)
 }
 
-func main() {
+func main242() {
 	fmt.Println(getPermutation(4, 9))
 }

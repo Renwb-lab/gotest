@@ -33,6 +33,6 @@ func minimumAddedCoins(coins []int, target int) int {
 	return r
 }
 
-func main() {
+func main275() {
 	fmt.Println(minimumAddedCoins([]int{1, 4, 10}, 19))
 }

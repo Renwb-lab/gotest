@@ -44,7 +44,7 @@ func subsets(nums []int) [][]int {
 	return ret
 }
 
-func main() {
+func main316() {
 	nums := []int{9, 0, 3, 5, 7}
 	ret := subsetsV1(nums)
 	for _, line := range ret {

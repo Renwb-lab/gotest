@@ -25,7 +25,7 @@ func maximumNumberOfStringPairs(words []string) int {
 	return ans
 }
 
-func main() {
+func main250() {
 	fmt.Println(maximumNumberOfStringPairs([]string{
 		"cd", "ac", "dc", "ca", "zz",
 	}))

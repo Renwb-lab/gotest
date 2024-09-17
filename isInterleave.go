@@ -83,7 +83,7 @@ func isInterleave3(s1 string, s2 string, s3 string) bool {
 	return helper[n2]
 }
 
-func main() {
+func main327() {
 	fmt.Println(isInterleave("aabcc", "dbbca", "aadbbbaccc"))
 	fmt.Println(isInterleave2("aabcc", "dbbca", "aadbbbaccc"))
 	fmt.Println(isInterleave3("aabcc", "dbbca", "aadbbbaccc"))

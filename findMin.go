@@ -4,6 +4,8 @@ import "fmt"
 
 func findMin(nums []int) int {
 	l, r := 0, len(nums)-1
+	// l < r 非常重要！！！
+	// 终止条件：l == r
 	for l < r {
 		m := l + (r-l)/2
 		if nums[m] <= nums[r] {
@@ -17,7 +19,7 @@ func findMin(nums []int) int {
 	return l
 }
 
-func main() {
+func main071041() {
 	fmt.Println(findMin([]int{3, 4, 5, 1, 2}))
 	fmt.Println(findMin([]int{4, 5, 6, 7, 0, 1, 2}))
 	fmt.Println(findMin([]int{11, 13, 15, 17}))

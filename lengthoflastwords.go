@@ -20,7 +20,7 @@ func f(s string) int {
 	return r
 }
 
-func main() {
+func main247() {
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		b, _, _ := reader.ReadLine()

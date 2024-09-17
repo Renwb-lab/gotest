@@ -74,6 +74,6 @@ func maximumSumOfHeights(maxHeights []int) int64 {
 	return ans
 }
 
-func main() {
+func main260() {
 	fmt.Println(maximumSumOfHeights([]int{5, 3, 4, 1, 1}))
 }

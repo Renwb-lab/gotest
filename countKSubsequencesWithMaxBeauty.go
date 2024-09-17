@@ -61,6 +61,6 @@ func comb(n, k int) int {
 	return res % mod
 }
 
-func main() {
+func main071022() {
 	fmt.Println(countKSubsequencesWithMaxBeauty("bcca", 2))
 }

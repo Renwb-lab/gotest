@@ -31,6 +31,6 @@ func splitWordsBySeparator(words []string, separator byte) []string {
 	return ans
 }
 
-func main() {
+func main310() {
 	fmt.Println(splitWordsBySeparator([]string{"one.two.three", "four.five", "six"}, '.'))
 }

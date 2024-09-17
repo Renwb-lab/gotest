@@ -77,7 +77,7 @@ func minimumTotal3(triangle [][]int) int {
 	return ans
 }
 
-func main() {
+func main273() {
 	fmt.Println(minimumTotal3([][]int{
 		{-1},
 		{2, 3},

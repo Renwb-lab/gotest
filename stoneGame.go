@@ -7,6 +7,6 @@ func stoneGame(piles []int) bool {
 	return true
 }
 
-func main() {
+func main313() {
 	fmt.Println(stoneGame([]int{5, 3, 4, 5}))
 }

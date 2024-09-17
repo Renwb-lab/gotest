@@ -34,7 +34,7 @@ func (this *Solution) RandPoint() []float64 {
 	}
 }
 
-func main() {
+func main295() {
 	s := Constructor(0.01, -73839.1, -3289891.3)
 	i := 0
 	for {

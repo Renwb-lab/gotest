@@ -58,6 +58,6 @@ func countCompleteSubstrings(word string, k int) int {
 	return res
 }
 
-func main() {
+func main071023() {
 	fmt.Println(countCompleteSubstrings("gvgvvgv", 2))
 }

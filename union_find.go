@@ -49,7 +49,7 @@ func (uf *UnionFind) Group(x, y int) bool {
 	return uf.Find(x) == uf.Find(y)
 }
 
-func main() {
+func main326() {
 	uf := NewUnionFind(10)
 	uf.Union(1, 2)
 	uf.Union(1, 3)

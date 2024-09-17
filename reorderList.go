@@ -13,10 +13,10 @@ package main
  * }
  */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+// type ListNode struct {
+// 	Val  int
+// 	Next *ListNode
+// }
 
 func reorderList(head *ListNode) {
 	var dp func(inp *ListNode, in int)
@@ -43,7 +43,7 @@ func reorderList(head *ListNode) {
 	}
 }
 
-func main() {
+func main296() {
 	head := &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, nil}}}}
 	reorderList(head)
 }

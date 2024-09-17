@@ -64,7 +64,7 @@ func mostCompetitive2(nums []int, k int) []int {
 	return res[:k]
 }
 
-func main() {
+func main277() {
 	fmt.Println(mostCompetitive([]int{
 		2, 10, 3, 5, 9, 4, 2, 0, 6, 7, 8, 0, 6,
 		5, 8, 1, 6, 1, 5, 5, 2, 10, 9, 5, 7, 7,

@@ -8,7 +8,7 @@ type MyHashSet struct {
 
 const base = 1 << 16
 
-func Constructor() MyHashSet {
+func Constructor12() MyHashSet {
 	return MyHashSet{data: make([]list.List, base)}
 }
 
@@ -26,7 +26,7 @@ func (this *MyHashSet) Add(key int) {
 
 func (this *MyHashSet) Remove(key int) {
 	idx := this.hash(key)
-	for it := this.data[idx].Front(); it != nil; it = e.Next() {
+	for it := this.data[idx].Front(); it != nil; it = it.Next() {
 		if it.Value.(int) == key {
 			this.data[idx].Remove(it)
 		}
@@ -35,7 +35,7 @@ func (this *MyHashSet) Remove(key int) {
 
 func (this *MyHashSet) Contains(key int) bool {
 	idx := this.hash(key)
-	for it := this.data[idx].Front(); it != nil; it = e.Next() {
+	for it := this.data[idx].Front(); it != nil; it = it.Next() {
 		if it.Value.(int) == key {
 			return true
 		}

@@ -47,7 +47,7 @@ func bestTeamScore(scores []int, ages []int) int {
 	return max(helper...)
 }
 
-func main() {
+func main071011() {
 	fmt.Println(bestTeamScore(
 		[]int{1, 3, 7, 3, 2, 4, 10, 7, 5},
 		[]int{4, 5, 2, 1, 1, 2, 4, 1, 4}))

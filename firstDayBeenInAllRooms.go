@@ -15,6 +15,6 @@ func firstDayBeenInAllRooms(nextVisit []int) int {
 	return dp[n-1]
 }
 
-func main() {
+func main252() {
 	fmt.Println(firstDayBeenInAllRooms([]int{0, 0, 2}))
 }

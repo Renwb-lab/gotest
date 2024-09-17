@@ -26,7 +26,7 @@ func reverseArr(arr []int, target int) int {
 	return -1
 }
 
-func main() {
+func main297() {
 	arr := []int{5, 6, 7, 8, 9, 1, 2, 3, 4}
 	fmt.Println(reverseArr(arr, 10))
 }

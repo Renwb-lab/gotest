@@ -34,6 +34,6 @@ func alternatingSubarray(nums []int) int {
 	return res
 }
 
-func main() {
+func main07109() {
 	fmt.Println(alternatingSubarray([]int{2, 3, 4, 3, 4}))
 }

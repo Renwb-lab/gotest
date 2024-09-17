@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main071018() {
 	s := make([]int, 0)
 
 	oldCap := cap(s)

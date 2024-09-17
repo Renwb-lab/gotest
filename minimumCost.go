@@ -46,6 +46,6 @@ func minimumCost(nums []int) int64 {
 	return r
 }
 
-func main() {
+func main266() {
 	fmt.Println(minimumCost([]int{5, 2, 1}))
 }

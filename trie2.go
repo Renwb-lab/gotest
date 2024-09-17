@@ -48,7 +48,7 @@ func (t *trie) Find(words string) bool {
 	return p != nil && p.isEnd
 }
 
-func main() {
+func main324() {
 	t := newTrie()
 	fmt.Println(t.Find("a"))
 	t.Insert("abc")
