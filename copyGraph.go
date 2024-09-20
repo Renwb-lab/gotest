@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 1 - 2 - 3
 //. - 4 -
@@ -20,33 +22,64 @@ type GNode struct {
 	nei []*GNode
 }
 
-func copyGraph(node *GNode) *GNode {
-	mapping := map[*GNode]*GNode{}
-
-	var dfs func(node *GNode) *GNode
-	dfs = func(node *GNode) *GNode {
-		if _, ok := mapping[node]; ok {
-			return nil
+func copyGraphBfs(node *GNode) *GNode {
+	if node == nil {
+		return nil
+	}
+	// 保存映射关系
+	mapping := make(map[*GNode]*GNode)
+	queue := []*GNode{node}
+	// 构建Node
+	res := &GNode{node.val, nil}
+	mapping[node] = res
+	// 存放到queue中的节点已完成构造
+	for len(queue) > 0 {
+		cur := queue[0]
+		queue = queue[1:]
+		for _, nex := range cur.nei {
+			// 构建当前节点的nei
+			if len(mapping[cur].nei) == 0 {
+				mapping[cur].nei = make([]*GNode, 0)
+			}
+			// 如果当前的节点已经出现在mapping中，则表明已经访问过，则不需要重复访问
+			// 只要将关系链接起来就可以了
+			if n, ok := mapping[nex]; ok {
+				mapping[cur].nei = append(mapping[cur].nei, n)
+			} else {
+				// 构建nei节点，更新mapping, 关联关系, 进队列
+				n := &GNode{nex.val, nil}
+				mapping[nex] = n
+				mapping[cur].nei = append(mapping[cur].nei, n)
+				queue = append(queue, nex)
+			}
 		}
+	}
+	return res
+}
+
+func copyGraphDfs(node *GNode) *GNode {
+	var dfs func(node *GNode) *GNode
+	mapping := make(map[*GNode]*GNode)
+	dfs = func(node *GNode) *GNode {
+		if node == nil {
+			return node
+		}
+		if res, ok := mapping[node]; ok {
+			return res
+		}
+		// 复制当前节点
 		cur := &GNode{val: node.val}
+		// 保存映射关系
 		mapping[node] = cur
 		if len(node.nei) == 0 {
 			return cur
 		}
-		l := len(node.nei)
-		cur.nei = make([]*GNode, l, l)
-		for i, c := range node.nei {
-			var r *GNode
-			if t, ok := mapping[c]; ok {
-				r = t
-			} else {
-				r = dfs(c)
-			}
-			cur.nei[i] = r
+		cur.nei = make([]*GNode, len(node.nei))
+		for i, nex := range node.nei {
+			cur.nei[i] = dfs(nex)
 		}
 		return cur
 	}
-
 	return dfs(node)
 }
 
@@ -71,7 +104,8 @@ func printGraph(node *GNode) {
 
 	dfs(node)
 }
-func main071026() {
+
+func main() {
 	node1 := &GNode{val: 1, nei: make([]*GNode, 0)}
 	node2 := &GNode{val: 2, nei: make([]*GNode, 0)}
 	node3 := &GNode{val: 3, nei: make([]*GNode, 0)}
@@ -80,7 +114,7 @@ func main071026() {
 	node2.nei = append(node2.nei, node1, node3)
 	node3.nei = append(node3.nei, node2, node4)
 	node4.nei = append(node4.nei, node1, node3)
-	res := copyGraph(node1)
+	res := copyGraphDfs(node1)
 
 	printGraph(res)
 	fmt.Println()

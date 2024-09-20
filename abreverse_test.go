@@ -13,8 +13,7 @@ func Test_ABReverse(t *testing.T) {
 	ast.Equal(ABReverse("BBB"), 0)
 	ast.Equal(ABReverse("ABA"), 1)
 	ast.Equal(ABReverse("ABAA"), 1)
-	ast.Equal(ABReverse("ABAB"), 2)
-	ast.Equal(ABReverse("ABAB"), 2)
+	ast.Equal(ABReverse("ABAB"), 1)
 	ast.Equal(ABReverse("ABABB"), 1)
-	ast.Equal(ABReverse("ABABAA"), 3)
+	ast.Equal(ABReverse("ABABAA"), 2)
 }

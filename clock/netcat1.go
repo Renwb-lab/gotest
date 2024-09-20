@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func main() {
+func main223() {
 	conn, err := net.Dial("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)

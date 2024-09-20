@@ -24,7 +24,7 @@ func printer(in <-chan int) {
 	}
 }
 
-func main() {
+func main229() {
 	naturals := make(chan int)
 	squares := make(chan int)
 	go counter(naturals)

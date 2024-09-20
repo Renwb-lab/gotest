@@ -26,7 +26,7 @@ func handleConn(c net.Conn) {
 	c.Close()
 }
 
-func main() {
+func main219() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)

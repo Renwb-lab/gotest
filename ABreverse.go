@@ -1,11 +1,5 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
-
 // （200分）有一个字符串 ，如 “AABBA”，（只有 ‘A’ 和 ‘B’  组成 ，其中规定 ‘B’  > ‘A’），
 //  你可以改变其中任意一个字符  （A -> B 或 B -> A），使其变成一个递增串 ，求把该字符串变成递增字符串的最少次数
 // 	示例 1：
@@ -47,16 +41,4 @@ func ABReverse(inStr string) int {
 		return num1
 	}
 	return num2
-}
-
-func main19() {
-	reader := bufio.NewReader(os.Stdin)
-	for {
-		input, err := reader.ReadString('\n')
-		if err != nil {
-			fmt.Println("An error occured while reading input. Please try again", err)
-			return
-		}
-		fmt.Println(ABReverse(input))
-	}
 }

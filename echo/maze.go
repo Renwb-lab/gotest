@@ -40,7 +40,7 @@ func print(res [][]int) {
 	fmt.Println()
 }
 
-func main() {
+func main222() {
 	// m, n := 0, 0
 	// fmt.Scan(&m, &n)
 	// h := make([][]int, m, m)

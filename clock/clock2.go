@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func main224() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)

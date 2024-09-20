@@ -8,7 +8,7 @@ import (
 func process(f string) (string, int) {
 	return f, len(f)
 }
-func main() {
+func main228() {
 	fileNames := []string{"1", "2", "3", "4", "1234"}
 	ch := make(chan int, len(fileNames))
 

@@ -8,11 +8,11 @@ import (
 	"time"
 )
 
-func launch() {
-	fmt.Println("launch")
-}
+// func launch() {
+// 	fmt.Println("launch")
+// }
 
-func main() {
+func main238() {
 	abort := make(chan struct{}, 0)
 	var wg sync.WaitGroup
 	defer wg.Wait()

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main231() {
 	naturals := make(chan int)
 	squares := make(chan int)
 

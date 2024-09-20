@@ -13,7 +13,7 @@ import (
 // ./chat
 // ./netcat3
 
-func main() {
+func main282() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
 		log.Fatal(err)

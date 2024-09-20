@@ -31,7 +31,7 @@ func dirents(dir string) []os.FileInfo {
 	return entries
 }
 
-func main() {
+func main233() {
 	// Determine the initial directories.
 	flag.Parse()
 	roots := flag.Args()
