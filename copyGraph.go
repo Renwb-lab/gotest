@@ -105,7 +105,7 @@ func printGraph(node *GNode) {
 	dfs(node)
 }
 
-func main() {
+func main232() {
 	node1 := &GNode{val: 1, nei: make([]*GNode, 0)}
 	node2 := &GNode{val: 2, nei: make([]*GNode, 0)}
 	node3 := &GNode{val: 3, nei: make([]*GNode, 0)}
