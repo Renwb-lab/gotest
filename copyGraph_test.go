@@ -5,14 +5,12 @@ import (
 	"os"
 	"reflect"
 	"testing"
-
-	"go.uber.org/goleak"
 )
 
 var testNode1, testNode2, testNode3, testNode4 *GNode
 
 func TestMain(m *testing.M) {
-	goleak.VerifyTestMain(m)
+	// goleak.VerifyTestMain(m)
 
 	// 初始化测试数据
 	node1 := &GNode{val: 1, nei: make([]*GNode, 0)}

@@ -136,6 +136,36 @@ func superEggDropV2(k int, n int) int {
 	return 0
 }
 
+func superEggDropV3(k int, n int) int {
+	// dp[k][m] = x 表示k个鸡蛋尝试m次，最好的情况下，能够找到的最大高度为x
+	// dp[1][7] = 7 表示1个鸡蛋尝试7次，最好的情况下，能够找到的最大高度为7
+
+	// dp[k][m] = dp[k][m-1] + dp[k-1][m-1] + 1
+	dp := make([][]int, k+1)
+	for i := 0; i <= k; i += 1 {
+		dp[i] = make([]int, 2)
+	}
+	// 不管多少个鸡蛋，如果只扔一次的话，那么最大高度就是1
+	for i := 1; i <= k; i += 1 {
+		dp[i][1] = 1
+	}
+	// 如果只有一个鸡蛋的话，有几次尝试次数，最大高度就是几
+	for j := 0; j <= 1; j += 1 {
+		dp[1][j] = j
+	}
+
+	for j := 1; j <= n; j += 1 {
+		for i := 1; i <= k; i += 1 {
+			dp[i][j%2] = dp[i][(j-1)%2] + dp[i-1][(j-1)%2] + 1
+		}
+		if dp[k][j%2] >= n {
+			return j
+		}
+	}
+
+	return 0
+}
+
 func main320() {
 	fmt.Println(superEggDrop(2, 6))
 }
